@@ -1,4 +1,21 @@
 .tableContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white;
+  width: 90%;
+  margin: 10rem auto;
+  border-radius: 0.8rem;
 }
 
-/* d-flex vh-100 bg-primary justify-content-center align-items-center */
+.tableContainer thead,
+tbody {
+  color: black;
+  text-align: center;
+}
+
+.tableContainer thead {
+  font-size: 2rem;
+  color: red;
+}

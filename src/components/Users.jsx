@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import classes from './Users.module.css';
 
-function Users() {
+const Users = () => {
   const [users, setUsers] = useState([
     {
       id: 1,
@@ -39,6 +39,6 @@ function Users() {
       </table>
     </div>
   );
-}
+};
 
 export default Users;
