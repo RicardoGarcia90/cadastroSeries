@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import classes from './Users.module.css';
+import { Link } from 'react-router-dom';
 
 const Users = () => {
   const [users, setUsers] = useState([
@@ -13,6 +14,13 @@ const Users = () => {
   ]);
   return (
     <div className={classes.tableContainer}>
+      {/* AJUSTAR LINK, ESTÁ SENDO ATIVADO QUANDO CLICO EM QUALQUER LUGAR DA DIV, QUERO QUE ELE SEJÁ ATIVADO SOMENTE QUANDO CLICO EM CIMA DO BOTÃO 'Add+' */}
+
+      {/* CONTINUAR EM 11:49 */}
+
+      <Link className={classes['btn-create']} to="/create">
+        <button className={classes['btn-create_text']}>Add+</button>
+      </Link>
       <table>
         <thead>
           <tr>
@@ -20,6 +28,7 @@ const Users = () => {
             <th>Plataforma</th>
             <th>Status</th>
             <th>Minha nota</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -30,8 +39,8 @@ const Users = () => {
               <td>{user.status}</td>
               <td>{user.minhaNota}</td>
               <td>
-                <button>Edit</button>
-                <button>Delete</button>
+                <button className={classes.btnEditar}>Editar</button>
+                <button className={classes.btnDeletar}>Deletar</button>
               </td>
             </tr>
           ))}
