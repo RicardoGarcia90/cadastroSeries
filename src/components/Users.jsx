@@ -14,16 +14,14 @@ const Users = () => {
   ]);
   return (
     <div className={classes.tableContainer}>
-      {/* AJUSTAR LINK, ESTÁ SENDO ATIVADO QUANDO CLICO EM QUALQUER LUGAR DA DIV, QUERO QUE ELE SEJÁ ATIVADO SOMENTE QUANDO CLICO EM CIMA DO BOTÃO 'Add+' */}
-
-      {/* CONTINUAR EM 11:49 */}
-
-      <Link className={classes['btn-create']} to="/create">
-        <button className={classes['btn-create_text']}>Add+</button>
-      </Link>
+      <button className={classes['btn-create']}>
+        <Link className={classes['btn-create_text']} to="/create">
+          Add+
+        </Link>
+      </button>
       <table>
         <thead>
-          <tr>
+          <tr className={classes.thBackground}>
             <th>Nome da série</th>
             <th>Plataforma</th>
             <th>Status</th>
@@ -33,7 +31,7 @@ const Users = () => {
         </thead>
         <tbody>
           {users.map((user) => (
-            <tr>
+            <tr key={user.id}>
               <td>{user.nomeDaSerie}</td>
               <td>{user.plataforma}</td>
               <td>{user.status}</td>
