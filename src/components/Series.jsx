@@ -2,7 +2,7 @@ import { useState } from 'react';
 import classes from './Users.module.css';
 import { Link } from 'react-router-dom';
 
-const Users = () => {
+const Series = () => {
   const [users, setUsers] = useState([
     {
       id: 1,
@@ -22,11 +22,12 @@ const Users = () => {
       <table>
         <thead>
           <tr className={classes.thBackground}>
-            <th>Nome da série</th>
+            <th>Nome</th>
             <th>Plataforma</th>
             <th>Status</th>
             <th>Minha nota</th>
             <th>Ações</th>
+            <th>Detalhes</th>
           </tr>
         </thead>
         <tbody>
@@ -40,6 +41,9 @@ const Users = () => {
                 <button className={classes.btnEditar}>Editar</button>
                 <button className={classes.btnDeletar}>Deletar</button>
               </td>
+              <td>
+                <Link to="/details">Abrir</Link>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -48,4 +52,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default Series;

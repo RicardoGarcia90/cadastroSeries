@@ -2,18 +2,20 @@ import { useState } from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Users from './components/Users';
-import CreateUser from './components/CreateUser';
-import UpdateUser from './components/UpdateUser';
+import CreateSeries from './components/CreateSeries';
+import Series from './components/Series';
+import UpdateSeries from './components/UpdateSeries';
+import Detalhes from './components/Detalhes';
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Users />}></Route>
-          <Route path="/create" element={<CreateUser />}></Route>
-          <Route path="/update" element={<UpdateUser />}></Route>
+          <Route path="/" element={<Series />}></Route>
+          <Route path="/create" element={<CreateSeries />}></Route>
+          <Route path="/update" element={<UpdateSeries />}></Route>
+          <Route path="/details" element={<Detalhes />}></Route>
         </Routes>
       </BrowserRouter>
     </>

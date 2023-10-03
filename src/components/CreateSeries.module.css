@@ -1,0 +1,9 @@
+.formContainer {
+  background-color: white;
+  width: 90%;
+  margin: 10rem auto;
+}
+
+.boxText {
+  resize: none;
+}
